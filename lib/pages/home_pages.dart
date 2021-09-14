@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_consume_api/_widgets/circle.dart';
+import 'package:flutter_consume_api/_widgets/icon_container.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -9,6 +10,8 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
+
     return Scaffold(
       body: SafeArea(
           child: Container(
@@ -17,19 +20,21 @@ class _HomePageState extends State<HomePage> {
         child: Stack(
           children: [
             Positioned(
-                top: -100,
-                right: -50,
+                top: -(size.width*0.8)*0.4,
+                right: -(size.width*0.8)*0.2,
                 child: Circle(
-                  size: 280.0,
-                  colors: [Colors.red, Colors.redAccent],
+                  size: size.width*0.8,
+                  colors: [Colors.pinkAccent, Colors.pink],
                 )),
             Positioned(
-                top: -100,
-                left: -25,
+                top: -(size.width*0.55)*0.55,
+                left: -(size.width*0.55)*0.15,
                 child: Circle(
-                  size: 200.0,
-                  colors: [Colors.deepOrange, Colors.deepOrangeAccent],
+                  size: size.width*0.55,
+                  colors: [Colors.deepOrangeAccent, Colors.deepOrange],
                 )),
+            Positioned(
+                child: IconContainer())
           ],
         ),
       )),

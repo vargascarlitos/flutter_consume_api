@@ -18,6 +18,7 @@ class _HomePageState extends State<HomePage> {
         height: double.infinity,
         width: double.infinity,
         child: Stack(
+          alignment: Alignment.center,
           children: [
             Positioned(
                 top: -(size.width*0.8)*0.4,
@@ -34,6 +35,7 @@ class _HomePageState extends State<HomePage> {
                   colors: [Colors.deepOrangeAccent, Colors.deepOrange],
                 )),
             Positioned(
+                top: 130,
                 child: IconContainer())
           ],
         ),

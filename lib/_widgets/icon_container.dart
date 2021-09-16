@@ -11,19 +11,19 @@ class IconContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 110,
-      height: 110,
-      padding: EdgeInsets.all(20),
+      width: this.size,
+      height: this.size,
+      padding: EdgeInsets.all(this.size*0.15),
       decoration: BoxDecoration(
         color: Colors.white,
-        boxShadow: [BoxShadow(color: Colors.black26, blurRadius: 10.0)],
-        borderRadius: BorderRadius.circular(15.0),
+        boxShadow: [BoxShadow(color: Colors.black26, blurRadius: 20.0, offset: Offset(0,10))],
+        borderRadius: BorderRadius.circular(this.size*0.15),
       ),
       child: Center(
         child: SvgPicture.asset(
           "assets/perfil.svg",
-          width: 80,
-          height: 80,
+          width: this.size*0.8,
+          height: this.size*0.8,
         ),
       ),
     );
